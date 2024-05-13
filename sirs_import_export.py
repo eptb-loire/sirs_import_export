@@ -1,7 +1,6 @@
-#python S:\Dossiers_Agents\EBigorne\Postgres\requetes\sirs_import_export.py
-#dans power shell, se placer dans ce rep puis py sirs_import_export.py
-#Créé par Emilie BIGORNE, Etablissement public Loire, mais 2024
-
+#Créé par Emilie BIGORNE, Etablissement public Loire, mai 2024
+#emilie.bigorne@eptb-loire.fr
+#v 1.0
 try:
 	# Pour Python 2
 	from Tkinter import * 
@@ -37,8 +36,10 @@ def file_import():
 
 def connect_couchdb():
 	serveur=ip.get()
+	user=usersirs.get()
+	pw=pwdsirs.get()
 	print(serveur)
-	couch_serveur = couchdb2.Server('http://geouser:geopw@{}:5984/'.format(serveur))
+	couch_serveur = couchdb2.Server('http://{}:{}@{}:5984/'.format(user, pw,serveur))
 	try :
 		print(couch_serveur)
 		testcouchdb=True
@@ -55,7 +56,9 @@ def connect_couchdb():
 def connect_couchdb_import():
 	checknewbase=True
 	serveur=ip.get()
-	couch_serveur = couchdb2.Server('http://geouser:geopw@{}:5984/'.format(serveur))
+	user=usersirs.get()
+	pw=pwdsirs.get()
+	couch_serveur = couchdb2.Server('http://{}:{}@{}:5984/'.format(user, pw,serveur))
 
 	try :
 		print(couch_serveur)
