@@ -1,5 +1,5 @@
 # sirs2postgis
-Utilitaire d'import/export de bases SIRS
+
 Scripts créés par Emilie BIGORNE (Etablissement public Loire) en mai 2024.
  
 Le script python permet d'exporter une base au format .tar et de la ré-importer dans la même base couchDb avec un nom différent ou dans une autre base CouchDB
@@ -19,5 +19,5 @@ Le scirpt est compilé en un exécutable autonome : sirs_import_export.exe
 		- nom de la nouvelle base
 
 
-
+Télécharger l'exécutable : https://github.com/eptb-loire/sirs_import_export/releases/tag/v1.0
 
