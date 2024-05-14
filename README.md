@@ -1,4 +1,4 @@
-# sirs2postgis
+# sirs_import_export
 
 Scripts créés par Emilie BIGORNE (Etablissement public Loire) en mai 2024.
  
